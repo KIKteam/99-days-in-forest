@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Скрываем прокрутку, если игра занимает весь экран */
+    background-color: #000; /* Черный фон, как ты просил для лобби */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Минимальная высота 100% от высоты видимой части окна */
+    font-family: 'Pixelify Sans', 'Press Start 2P', monospace; /* Пример пиксельного шрифта, нужно будет подключить */
+    color: #fff; /* Белый цвет текста по умолчанию */
+}
+
+#game-container {
+    /* Это контейнер, где будет размещаться игровой Canvas */
+    /* Размеры будут зависеть от твоей пиксельной графики и масштаба */
+    /* Например: */
+    width: 800px; /* Ширина игрового поля */
+    height: 600px; /* Высота игрового поля */
+    border: 2px solid yellow; /* Желтая рамка, как в твоем описании */
+    image-rendering: pixelated; /* Важно для четкости пикселей! */
+    -webkit-font-smoothing: none; /* Ещё одна настройка для пикселей */
+    font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Здесь будут стили для лобби, кнопок, HUD и т.д. */
+/* Пример кнопки лобби: */
+.lobby-button {
+    background-color: #FFD700; /* Желтый пиксельный цвет */
+    color: #000; /* Черный текст */
+    border: 2px solid #FFA500; /* Оранжевая или темная обводка */
+    padding: 15px 30px;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: center;
+    image-rendering: pixelated;
+    font-family: 'Pixelify Sans', 'Press Start 2P', monospace;
+    border-radius: 0; /* Острые углы для пикселей */
+    box-shadow: 4px 4px 0px #8B0000; /* Пиксельная тень */
+    transition: background-color 0.1s;
+}
+
+.lobby-button:hover {
+    background-color: #FFEB00; /* Чуть светлее при наведении */
+}
+
+.lobby-button.disabled {
+    background-color: #555; /* Серый для неактивных кнопок */
+    color: #AAA;
+    border-color: #333;
+    cursor: not-allowed;
+    box-shadow: none;
+}
